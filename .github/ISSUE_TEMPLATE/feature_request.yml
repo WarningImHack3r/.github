@@ -1,0 +1,30 @@
+name: "🚀 Feature Request"
+description: "I have a great suggestion!"
+labels: ["feature request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for taking the time to suggest a new feature!** Please describe your idea in details.
+
+  - type: textarea
+    attributes:
+      label: What problem are you trying to solve?
+      description: A concise description of what the problem is.
+      placeholder: "e.g. I want to…"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Describe the solution you’d like
+      description: How to solve your problem, with as much detail as possible
+      placeholder: "e.g. To do so, we should be able to…"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Describe any alternatives you’ve also considered
+      description: |
+        Existing but less convenient solution, another tool does it, etc

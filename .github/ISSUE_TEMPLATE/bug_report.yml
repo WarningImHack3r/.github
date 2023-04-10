@@ -1,0 +1,81 @@
+name: "🐛 Bug Report"
+description: Tell me what I broke again
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for reporting an issue!** Please make sure you've already searched for similar issue before creating a new one.
+
+  - type: textarea
+    id: bug-explanation
+    attributes:
+      label: What is the issue?
+      description: A clear and concise description of what the bug is.
+      placeholder: Typo, crash, wrong behavior...
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-steps
+    attributes:
+      label: What are the steps to reproduce this issue?
+      description: Describe how this bug occurred so I can try to reproduce it.
+      placeholder: I was doing this when that occurred...
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-expectation
+    attributes:
+      label: What were you expecting to happen?
+      description: A clear and concise description of what was supposed to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-logs
+    attributes:
+      label: Paste any relevant logs, error output, etc.
+      description: |
+        Please copy and paste any relevant log output, which will be automatically formatted into code (no need for backticks).
+        If it’s long, please paste to https://pastebin.com/ (or any paste service) and copy the link here.
+      render: shell
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Your device(s)
+
+  - type: dropdown
+    id: device-os
+    attributes:
+      label: What OS are you experiencing the problem on?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Not applicable
+      multiple: true
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-device-info
+    attributes:
+      label: Additional platform information
+      description: Describe any other information about your device(s) that may be relevant to your issue
+
+  - type: markdown
+    attributes:
+      value: "---"
+  
+  - type: checkboxes
+    id: duplicates-agreement
+    attributes:
+      label: Duplicates
+      options:
+        - label: I have checked that my problem has not already been mentioned recently in an existing issue
+          required: true
