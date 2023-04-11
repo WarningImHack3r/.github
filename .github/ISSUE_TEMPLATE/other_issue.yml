@@ -29,6 +29,5 @@ body:
     attributes:
       label: Special case
       options:
-        - label: This is not an issue
-          description: This is not a bug nor a feature request, I can't use other templates
+        - label: This is not a bug nor a feature request, I can't use other templates
           required: true
