@@ -1,0 +1,34 @@
+name: "🔧 Other issue"
+description: Something else
+labels: ["needs triage"]
+body:
+  - type: input
+    id: issue-type
+    attributes:
+      label: Issue type
+      description: What kind of issue is this?
+      placeholder: Problem, question...
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the issue is.
+      placeholder: I don't know how to do this, I have a question, I have a problem...
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: ---
+
+  - type: checkboxes
+    id: is-not-an-issue
+    attributes:
+      label: Special case
+      options:
+        - label: This is not an issue
+          description: This is not a bug nor a feature request, I can't use other templates
+          required: true
