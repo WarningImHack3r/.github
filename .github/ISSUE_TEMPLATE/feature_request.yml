@@ -8,6 +8,7 @@ body:
         **Thanks for taking the time to suggest a new feature!** Please describe your idea in details.
 
   - type: textarea
+    id: solved-problem
     attributes:
       label: What problem are you trying to solve?
       description: A concise description of what the problem is.
@@ -16,6 +17,7 @@ body:
       required: true
 
   - type: textarea
+    id: wanted-solution
     attributes:
       label: Describe the solution you’d like
       description: How to solve your problem, with as much detail as possible
@@ -24,7 +26,16 @@ body:
       required: true
 
   - type: textarea
+    id: alternatives
     attributes:
       label: Describe any alternatives you’ve also considered
       description: |
         Existing but less convenient solution, another tool does it, etc
+
+  - type: checkboxes
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Additional information that helps us decide how to proceed
+      options:
+        - label: Would you be willing to help implement this feature?
